@@ -1,0 +1,17 @@
+<footer>
+	<div id="footer_wrapper">
+		<section id="prof">
+			<% if session[:user_id] %>
+			<p>プロフィール</p>
+			<figure>
+				<img src="https://secure.gravatar.com/avatar/da2b7524391b23be42fcc70ef53b30e9" alt="プロフィール写真">
+				<p><%= @user.name %></p>
+				<figcaption>2016年よりWEB制作に興味を持ち、本職の傍日々勉強に勤しんでいます。<br>
+				本職にて素人ながら業務用VBA制作もしています。
+				</figcaption>
+			</figure>
+			<% end %>
+		</section>
+	<small>&copy;2017 LIBERTY WORKERS co., Ltd.</small>
+	</div>
+</footer>

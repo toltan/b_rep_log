@@ -1,0 +1,40 @@
+<aside>
+    <section>
+      <% if !session[:user_id ] %>
+        <h3>ログイン</h3>
+        <%= form_for(@user ,url: log_in_path ) do  |f| %>
+          <%= f.label :email, "メールアドレス" %>
+          <%= f.email_field :email, class:'form_control', value: @user.email %>
+          <%= f.label :password, "パスワード" %>
+          <%= f.password_field :password, class:'form_control' %>
+          <%= f.submit "ログイン"%>
+        <% end %>
+      <% else %>
+        <h3>ログインユーザー</h3>
+        <p><%= link_to @user.name,user_path(@user) %></p>
+      <% end %>
+    </section>
+
+  <!-- <h3>WEBデザイン備忘LOG</h3>
+    <ul>
+      <li><a href="#">SEO対策</a></li>
+      <li><a href="#">デザイン</a></li>
+      <li><a href="#">テキストエディタ</a></li>
+      <li><a href="#">Photoshop</a></li>
+      <li><a href="#">Illustrator</a></li>
+    </ul>
+  </section>
+  <section class="create">
+    <h3>プログラミング備忘LOG</h3>
+    <ul>
+      <li><a href="#">EXCEL VBA</a></li>
+    </ul>
+  </section>
+  <section id="side_banner">
+    <h3>リンク集</h3>
+    <ul>
+      <li><a href="#">パチスロ期待値備LOG</a></li>
+      <li><a href="#">アフィリエイト備忘LOG</a></li>
+    </ul>
+  </section> -->
+</aside>

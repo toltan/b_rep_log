@@ -1,0 +1,12 @@
+<h2><%= "ユーザー情報:#{@user.name}" %></h2>
+<%= form_for @user do |f| %>
+  <p>
+    <%= f.label :email, "登録メールアドレス:" %>
+    <%= f.email_field :email %>
+  </p>
+  <p>
+    <%= f.label :content, "紹介文:" %>
+    <%= f.text_area :content %>
+  </p>
+  <%= f.submit "更新" %>
+<% end %>

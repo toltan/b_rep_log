@@ -1,0 +1,23 @@
+<header>
+	<div id="header_wrapper">
+		<div id="header_wrapper_left">
+			<h1><%= link_to "B-REP-LOG", root_path %></h1>
+			<p>今日からブログを始めよう!!</p>
+		</div>
+		<div class="header_wrapper_right">
+			<form action="#"　method="get">
+				<input type="text" name="search" placeholder="サイト内検索">
+				<input type="submit" value="検索">
+		  </form>
+			<ul>
+				<% if session[:user_id ] %>
+					<li id="log_out" class="btn"><%= link_to('ログアウト', log_out_url, method: :delete) %></li>
+				<% else %>
+					<li id="log_in" class="btn"><a href="#">ログイン</a></li>
+				<% end %>
+				<li id="day_button" class="btn"><a href="#">デイモード</a></li>
+				<li id="night_button" class="btn"><a href="#">ナイトモード</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
