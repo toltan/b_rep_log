@@ -1,4 +1,6 @@
-# README
+# README B_REP_LOG
+
+# This is the blog application for study programing
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
